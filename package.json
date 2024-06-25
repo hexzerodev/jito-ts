@@ -7,25 +7,25 @@
   "types": "dist/index.d.ts",
   "prepublish": "tsc",
   "dependencies": {
-    "@grpc/grpc-js": "^1.8.13",
-    "@noble/ed25519": "^1.7.1",
-    "@solana/web3.js": "~1.77.3",
-    "agentkeepalive": "^4.3.0",
-    "dotenv": "^16.0.3",
-    "jayson": "^4.0.0",
-    "node-fetch": "^2.6.7",
-    "superstruct": "^1.0.3"
+    "@grpc/grpc-js": "1.10.9",
+    "@noble/ed25519": "1.7.3",
+    "@solana/web3.js": "1.93.1",
+    "agentkeepalive": "4.5.0",
+    "dotenv": "16.4.5",
+    "jayson": "4.1.0",
+    "node-fetch": "3.3.2",
+    "superstruct": "1.0.4"
   },
   "devDependencies": {
-    "@types/google-protobuf": "^3.15.6",
-    "@types/node": "^14.11.2",
-    "@types/node-fetch": "^2.6",
-    "grpc-tools": "^1.12.3",
-    "gts": "^3.1.1",
-    "protoc-gen-ts": "^0.8.5",
-    "ts-proto": "~1.138.0",
-    "ts-protoc-gen": "~0.15.0",
-    "typescript": "^4.9.4"
+    "@types/google-protobuf": "3.15.12",
+    "@types/node": "20.14.7",
+    "@types/node-fetch": "2.6.11",
+    "grpc-tools": "1.12.4",
+    "gts": "5.3.1",
+    "protoc-gen-ts": "0.8.7",
+    "ts-proto": "1.180.0",
+    "ts-protoc-gen": "0.15.0",
+    "typescript": "5.5.2"
   },
   "scripts": {
     "gen-block-engine": "./scripts/gen-block-engine-protos submods/mev-protos",
@@ -34,10 +34,10 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "yarn run compile",
-    "pretest": "yarn run compile",
-    "posttest": "yarn run lint",
-    "run:backrun": "yarn tsc && node dist/examples/backrun/index",
-    "run:geyser": "yarn tsc && node dist/examples/geyser/index"
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint",
+    "run:backrun": "tsc && node dist/examples/backrun/index",
+    "run:geyser": "tsc && node dist/examples/geyser/index"
   }
 }
